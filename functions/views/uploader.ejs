@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('_head.ejs') -%>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <%- include('_description.ejs') -%>
+
+      <form enctype="multipart/form-data" method="post" action="/u/upload">
+        <input type="file" name="file" accept="image/*">
+        <input type="hidden" name="uid" value="<%= uid %>">
+        <input type="submit">
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>

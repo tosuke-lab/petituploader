@@ -1,0 +1,41 @@
+{
+  "name": "petituploader",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "Tosuke <tasukeprg@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt --spa",
+    "start": "nuxt start",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "build": "run-s build:*",
+    "build:client": "nuxt build --spa",
+    "build:function": "npm --prefix 'functions' run build",
+    "serve": "run-s build:function serve:firebase",
+    "serve:firebase": "firebase serve",
+    "precommit": "run-s lint"
+  },
+  "dependencies": {
+    "@firebase/app": "^0.3.1",
+    "@firebase/auth": "^0.5.2",
+    "@firebase/firestore": "^0.5.2",
+    "@firebase/messaging": "^0.3.2",
+    "@firebase/storage": "^0.2.2",
+    "@nuxtjs/dotenv": "^1.1.1",
+    "@nuxtjs/vuetify": "^0.4.2",
+    "nuxt-edge": "^2.0.0-25429981.9298177",
+    "qrcode": "^1.2.0",
+    "vuexfire": "^3.0.0-alpha.5"
+  },
+  "devDependencies": {
+    "@firebase/app-types": "^0.3.1",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.0",
+    "npm-run-all": "^4.1.3"
+  }
+}
